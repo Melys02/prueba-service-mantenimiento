@@ -10,4 +10,8 @@ import t_prueba_springcloud.prueba_service_mantenimiento.remoteservice.ServiceIn
 
 public class MantenimientoController {
 
+    @GetMapping("/orden")
+    public String consultarOrden() {
+        return "Respuesta del Servicio Mantenimiento- Orden";
+
 }
