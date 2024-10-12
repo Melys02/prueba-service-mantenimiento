@@ -15,4 +15,8 @@ public class MantenimientoController {
         return "Respuesta del Servicio Mantenimiento- Orden";
 
     }
+    @GetMapping ("/equipo")
+    public String consultarEquipo() {
+        return "Respuesta del Servicio Mantenimiento - Equipo";
+    }
 }
