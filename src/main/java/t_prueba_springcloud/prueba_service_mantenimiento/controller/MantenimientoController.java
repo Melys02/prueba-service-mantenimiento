@@ -9,14 +9,21 @@ import t_prueba_springcloud.prueba_service_mantenimiento.remoteservice.ServiceIn
 @RestController
 
 public class MantenimientoController {
+    private final ServiceInventarioClient serviceInventarioClient;
 
     @GetMapping("/orden")
     public String consultarOrden() {
         return "Respuesta del Servicio Mantenimiento- Orden";
 
     }
-    @GetMapping ("/equipo")
+
+    @GetMapping("/equipo")
     public String consultarEquipo() {
         return "Respuesta del Servicio Mantenimiento - Equipo";
+    }
+
+    @GetMapping("/equipo-inventario")
+    public String consultarMontoOrden() {
+        return serviceInventarioClient.consultarInventario();
     }
 }
